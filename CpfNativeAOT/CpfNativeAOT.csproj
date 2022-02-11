@@ -4,6 +4,10 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RestoreAdditionalProjectSources Condition="$(PublishNativeAot) == True">
+      https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet7/nuget/v3/index.json;
+      $(RestoreAdditionalProjectSources)
+    </RestoreAdditionalProjectSources>
   </PropertyGroup>
 
   <ItemGroup>
@@ -56,9 +60,14 @@
     <PackageReference Include="Xhm.CPF.Skia" Version="0.9" />
     <PackageReference Include="Xhm.CPF.Mac" Version="0.9" />
     <PackageReference Include="Xhm.CPF.Linux" Version="0.9" />
+    <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="7.0.0-*" Condition="$(PublishNativeAot) == True" />
   </ItemGroup>
   <PropertyGroup>
     <DefineConstants Condition="'$(TargetFramework)'=='net40'">Net4</DefineConstants>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
   </PropertyGroup>
+
+  <ItemGroup>
+    <RdXmlFile Include="rd.xml" />
+  </ItemGroup>
 </Project>

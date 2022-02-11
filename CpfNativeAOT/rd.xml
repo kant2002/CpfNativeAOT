@@ -1,0 +1,9 @@
+<Directives>
+    <Application>
+
+        <Assembly Name="CPF">
+            <Type Name="CPF.FloatField" Dynamic="Required All" />
+        </Assembly>
+
+    </Application>
+</Directives>
