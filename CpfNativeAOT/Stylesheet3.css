@@ -1,0 +1,158 @@
+﻿
+* {
+    FontFamily: 苹方-简; /*所有元素设置为 苹方-简 为了在Mac能正常显示中文*/
+}
+
+#caption {
+    Background: #00000000;
+}
+#frame {
+    /*Background: url(http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1208/14/c0/12901419_1344914249808.jpg);*/
+    Background:#0094ff;
+}
+#headBorder {
+    Background: #00000000;
+    BorderFill: #00000000;
+}
+#mainTab #headerPanel {
+    Width: 150;
+}
+TabItemTemplate TextBlock {
+    MarginLeft: 0;
+    Foreground: #fff;
+    FontSize: 14;
+}
+TabItemTemplate[IsSelected=true] > Border {
+    Background: #00000040;
+    BorderFill: #00000000;
+}
+@keyframes tabItemMouseLeave {
+    0% {
+        Background: #00000040;
+    }
+
+    100% {
+        Background: #00000000;
+    }
+}
+TabItemTemplate[IsMouseOver=false] {
+    animation-name: tabItemMouseLeave;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+TabItemTemplate[IsMouseOver=true] {
+    Background: #00000040;
+}
+
+@keyframes buttonAnimationEnter {
+    0% {
+        Background: #1E9FFF;
+    }
+
+    100% {
+        Background: rgb(75,178,255);
+    }
+}
+
+#DropDownPanel TextBlock {
+    MarginLeft: 5;
+}
+
+Button {
+    Background: #1E9FFF;
+    Foreground: #fff;
+    BorderFill: null;
+}
+
+    Button[IsMouseOver=true] {
+        Background: #1E9FFF;
+        animation-name: buttonAnimationEnter;
+        animation-duration: 0.2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    Button[IsPressed=true] {
+        Background: rgb(30,159,255);
+    }
+
+CheckBox #indeterminateMark {
+    Fill: #1E9FFF;
+}
+
+CheckBox #checkBoxBorder {
+    Background: #fff;
+    BorderFill: #1E9FFF;
+}
+
+CheckBox[IsChecked=true] #checkBoxBorder {
+    Background: #1E9FFF;
+    BorderFill: #1E9FFF;
+}
+
+CheckBox Polyline {
+    StrokeFill: #fff;
+}
+
+RadioButton #radioButtonBorder {
+    StrokeFill: #1E9FFF;
+}
+
+RadioButton #optionMark {
+    StrokeFill: #1E9FFF;
+    Fill: #1E9FFF;
+}
+
+ComboBox {
+    BorderFill: #1E9FFF;
+    BorderStroke: 1;
+    Background: #fff;
+    UseLayoutRounding: true;
+}
+
+TextBox {
+    BorderFill: #1E9FFF;
+    BorderStroke: 1;
+    UseLayoutRounding: true;
+    Background: #00000000;
+}
+
+    TextBox #contentPresenter {
+        Padding: 3;
+    }
+
+.Single { /*单行文本框*/
+    AcceptsReturn: false;
+    HScrollBarVisibility: Hidden;
+    VScrollBarVisibility: Hidden;
+}
+TextBox ScrollBar{
+    Background: #fff;
+}
+   TextBox ScrollBar Thumb {
+        CornerRadius: 5;
+    }
+    TextBox ScrollBar[Orientation=Horizontal] {
+        Height:12;
+    }
+    TextBox ScrollBar[Orientation=Vertical] {
+        Width: 12;
+    }
+    TextBox ScrollBar #PART_LineUpButton,TextBox ScrollBar #PART_LineDownButton {
+        Visibility: Collapsed;
+    }
+@keyframes shadowEffect {
+    0% {
+        ShadowColor: #00000000;
+    }
+    100% {
+        ShadowColor: #1E9FFF;
+    }
+}
+#shadowEffect[IsKeyboardFocusWithin=true] {
+    animation-name: shadowEffect;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}

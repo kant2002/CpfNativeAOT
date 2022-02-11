@@ -1,0 +1,90 @@
+﻿@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    src: url('res://CpfNativeAOT/fa-Brands.otf');
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    src: url('res://CpfNativeAOT/fa-Free.ttf');
+}
+
+@font-face {
+    font-family: 'Alibaba PuHuiTi';
+    src: url('res://CpfNativeAOT/AlibabaPuHuiTi.ttf');
+}
+
+* {
+    FontFamily: 'Alibaba PuHuiTi';
+}
+.icon_free {
+    FontFamily: 'Font Awesome 5 Free';
+}
+.icon_brands {
+    FontFamily: 'Font Awesome 5 Brands';
+}
+Button {
+    Background: rgb(7,188,252);
+    Foreground: #fff;
+    BorderFill: null;
+}
+
+    Button[IsMouseOver=true] {
+        Background: rgb(31,200,253);
+    }
+
+    Button[IsPressed=true] {
+        Background: rgb(30,159,255);
+    }
+
+CheckBox #checkBoxBorder {
+    Background: #fff;
+    BorderFill: #a1a1a1;
+}
+
+CheckBox Polyline {
+    StrokeFill: rgb(7,188,252);
+}
+
+.panel[IsKeyboardFocusWithin=true] {
+    BorderFill: rgb(30,159,255);
+}
+
+    .panel[IsKeyboardFocusWithin=true] TextBlock {
+        Foreground: rgb(30,159,255);
+    }
+
+#qrcode[IsMouseOver=true] {
+    Foreground:#a1a1a1;
+}
+
+#headPanel[IsMouseOver=true] #more {
+    animation-name: headPanelAnimationEnter;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+#headPanel[IsMouseOver=false] #more{
+    animation-name: headPanelAnimationLeave;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes headPanelAnimationEnter {
+    0% {
+        MarginLeft: 20;
+    }
+
+    100% {
+        MarginLeft: 150;
+    }
+}
+@keyframes headPanelAnimationLeave {
+    0% {
+        MarginLeft: 150;
+    }
+
+    100% {
+        MarginLeft:20;
+    }
+}

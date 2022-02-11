@@ -1,0 +1,85 @@
+﻿* {
+    FontFamily: 'Alibaba PuHuiTi';/*'微软雅黑'*/
+}
+
+.icon_free, .icon_free TextBlock {
+    FontFamily: 'Font Awesome 5 Free';
+}
+
+.icon_brands, .icon_brands TextBlock {
+    FontFamily: 'Font Awesome 5 Brands';
+}
+
+#caption {
+    Background: rgb(36,48,70);
+}
+.tool_btn {
+    Width: 25;
+    Height: 25;
+    FontSize: 14;
+    Foreground: rgb(86,93,98);
+}
+.tool_btn[IsMouseOver=true]{
+    Background:rgba(153, 153, 153, 0.15)
+}
+ScrollBar {
+    Background: null;
+}
+
+    ScrollBar Thumb {
+        CornerRadius: 5;
+        Background: rgba(153, 153, 153, 0.3)
+    }
+
+    ScrollBar[Orientation=Horizontal] {
+        Height: 10;
+    }
+
+    ScrollBar[Orientation=Vertical] {
+        Width: 10;
+    }
+
+    ScrollBar #PART_LineUpButton, ScrollBar #PART_LineDownButton {
+        Visibility: Collapsed;
+    }
+.close {
+    Background: rgb(216,218,222);
+    CornerRadius: 3;
+/*    IsAntiAlias: true;*/
+    BorderFill: rgb(162,166,171);
+}
+    .close[IsMouseOver=true] {
+        Background: rgb(239,239,240);
+    }
+.send {
+    Background: rgb(87,106,128);
+    Foreground: #ffffff;
+    CornerRadius: 3;
+/*    IsAntiAlias: true;*/
+    BorderFill: rgb(87,106,128);
+}
+    .send[IsMouseOver=true] {
+        Background: rgb(141,155,172);
+        BorderFill: rgb(141,155,172);
+    }
+
+TabControl #headBorder {
+    Background: null;
+    BorderThickness:0,0,0,1;
+}
+
+TabItem > Border {
+    Width:60;
+    BorderThickness: 0,0,0,2;
+}
+TabItem TextBlock {
+    FontSize:16;
+}
+
+TabItem[IsSelected=true] > Border {
+    BorderFill: rgb(25,25,25);
+}
+
+TabItem[IsSelected=true] {
+    Foreground: rgb(25,25,25);
+}

@@ -1,0 +1,96 @@
+﻿@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    src: url('res://CpfNativeAOT/fa-Brands.otf');
+}
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    src: url('res://CpfNativeAOT/fa-Free.ttf');
+}
+@font-face {
+    font-family: 'Alibaba PuHuiTi';
+    src: url('res://CpfNativeAOT/AlibabaPuHuiTi.ttf');
+}
+
+* {
+    FontFamily: '微软雅黑';
+}
+
+.icon_free, .icon_free TextBlock {
+    FontFamily: 'Font Awesome 5 Free';
+}
+
+.icon_brands, .icon_brands TextBlock {
+    FontFamily: 'Font Awesome 5 Brands';
+}
+
+.syt_btn {
+    Width: 30;
+    Height: 30;
+}
+
+    .syt_btn[IsMouseOver=true] {
+        Background: rgba(255, 255, 255, 0.2);
+    }
+
+#caption {
+    Background: null;
+}
+
+    #caption TextBlock {
+        Visibility: Collapsed;
+    }
+
+#frame {
+    Background: #0094ff;
+}
+
+TabControl {
+    Background: rgba(255, 255, 255, 0.8);
+}
+
+    TabControl #headBorder {
+        BorderThickness: 0,0,0,1;
+        BorderFill: rgb(215,219,222);
+        Background: null;
+    }
+
+TabItem > Border {
+    BorderThickness: 0,0,0,2;
+    Width: 90%;
+}
+
+TabItem TextBlock {
+    FontSize: 14;
+    FontStyle: Bold;
+}
+
+TabItem[IsSelected=true] > Border {
+    BorderFill: rgb(108,122,145);
+    Background: null;
+}
+
+TabItem[IsSelected=true] {
+    Foreground: rgb(108,122,145);
+}
+
+
+ScrollBar {
+    Background: null;
+}
+
+    ScrollBar Thumb {
+        CornerRadius: 5;
+        Background:rgba(255, 255, 255, 0.50)
+    }
+
+    ScrollBar[Orientation=Horizontal] {
+        Height: 10;
+    }
+
+    ScrollBar[Orientation=Vertical] {
+        Width: 10;
+    }
+
+    ScrollBar #PART_LineUpButton, ScrollBar #PART_LineDownButton {
+        Visibility: Collapsed;
+    }

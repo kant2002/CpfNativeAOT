@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AlibabaPuHuiTi.ttf" />
+    <None Remove="fa-Brands.otf" />
+    <None Remove="fa-Free.ttf" />
+    <None Remove="QQChat.css" />
+    <None Remove="QQLogin.css" />
+    <None Remove="QQMain.css" />
+    <None Remove="Resources\aio_friend_bg_nor %2881%29.png" />
+    <None Remove="Resources\aio_user_bg_nor %2871%29.png" />
+    <None Remove="Resources\arrow.png" />
+    <None Remove="Resources\headQQ.png" />
+    <None Remove="Resources\icon.png" />
+    <None Remove="Resources\qq.png" />
+    <None Remove="Resources\home.png" />
+    <None Remove="Resources\keyboard.png" />
+    <None Remove="Stylesheet1.css" />
+    <None Remove="Stylesheet3.css" />
+    <None Remove="test.svg" />
+    <None Remove="test1.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="AlibabaPuHuiTi.ttf" />
+    <EmbeddedResource Include="fa-Brands.otf" />
+    <EmbeddedResource Include="fa-Free.ttf" />
+    <EmbeddedResource Include="QQChat.css" />
+    <EmbeddedResource Include="QQLogin.css" />
+    <EmbeddedResource Include="QQMain.css" />
+    <EmbeddedResource Include="Resources\aio_friend_bg_nor (81).png" />
+    <EmbeddedResource Include="Resources\aio_user_bg_nor (71).png" />
+    <EmbeddedResource Include="Resources\arrow.png" />
+    <EmbeddedResource Include="Resources\headQQ.png" />
+    <EmbeddedResource Include="Resources\icon.png" />
+    <EmbeddedResource Include="Resources\qq.png" />
+    <EmbeddedResource Include="Resources\home.png" />
+    <EmbeddedResource Include="Resources\keyboard.png" />
+    <EmbeddedResource Include="Stylesheet1.css" />
+    <EmbeddedResource Include="Stylesheet3.css" />
+    <EmbeddedResource Include="test.svg" />
+    <EmbeddedResource Include="test1.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xhm.CPF" Version="0.9" />
+    <PackageReference Include="Xhm.CPF.Windows" Version="0.9" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net6.0'">
+    <PackageReference Include="Xhm.CPF.Skia" Version="0.9" />
+    <PackageReference Include="Xhm.CPF.Mac" Version="0.9" />
+    <PackageReference Include="Xhm.CPF.Linux" Version="0.9" />
+  </ItemGroup>
+  <PropertyGroup>
+    <DefineConstants Condition="'$(TargetFramework)'=='net40'">Net4</DefineConstants>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+</Project>
